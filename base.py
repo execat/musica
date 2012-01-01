@@ -1,7 +1,6 @@
 #!/usr/bin/python2
 
-from array import array
-from collections import deque
+import subprocess
 
 notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 
@@ -27,3 +26,6 @@ def blues(root):
 	ret = min_penta(root)
 	ret.insert(3, notes[(notes.index(root) + 6) % 12])
 	return ret
+
+def play(list):
+	subprocess.call(["
