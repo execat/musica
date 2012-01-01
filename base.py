@@ -1,7 +1,5 @@
 #!/usr/bin/python2
 
-import subprocess
-
 notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 
 def major(root):
@@ -27,5 +25,3 @@ def blues(root):
 	ret.insert(3, notes[(notes.index(root) + 6) % 12])
 	return ret
 
-def play(list):
-	subprocess.call(["
